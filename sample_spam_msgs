@@ -1,0 +1,43 @@
+Here are some example spam messages that should be detected as spam by your classifier (based on common spam patterns in the spam.csv dataset):
+
+### *Financial/Gambling Spam:*
+1. "WINNER!! You've won 1 million dollars! To claim, call 555-1234 now!"
+2. "Free entry in 2 a weekly comp to win FA Cup final tkts 21st May 2023. Text FA to 87121"
+3. "Urgent! Your bank account has been compromised. Click here to secure: bit.ly/fakebanklink"
+4. "You've been selected for a special investment opportunity with 500% returns! Call now!"
+
+### *Phishing Scams:*
+5. "Apple ID Alert: Your account has been locked. Verify now at apple.verify.com"
+6. "Amazon: Your package couldn't be delivered. Update details at amaz0n-delivery.com"
+7. "PayPal Security Alert: Unusual login attempt. Confirm your identity: paypa1-secure.net"
+
+### *Adult/Dating Spam:*
+8. "Hot singles in your area! Meet tonight: chat.hookup.com"
+9. "Camera girls waiting for you! Join now: adultcams.live"
+
+### *Tech Support Scams:*
+10. "Microsoft Windows Alert: Virus detected on your PC. Call support at 1-800-FAKE-NOW"
+11. "Your Android has 5 viruses! Clean now: andro1d-cleaner.com"
+
+### *Loan/Financial Scams:*
+12. "Get $5,000 loan today! No credit check! Approval in 5 minutes: quick-loans.biz"
+13. "Credit card debt? We can erase it! Call 555-0000 now!"
+
+### *Fake Job Offers:*
+14. "Work from home! Earn $200/hr as a data entry specialist. No experience needed!"
+15. "Make $10,000/month with our secret method. Limited spots available!"
+
+---
+
+### *How to Test These in Your App:*
+1. Copy any of these messages
+2. Paste into your Streamlit app's text area
+3. Click "Check Message"
+4. Should show "🚨 SPAM DETECTED!" with high confidence (typically >90%)
+
+*Note:* The exact detection depends on:
+- What patterns exist in your spam.csv dataset
+- How your model was trained
+- The vectorizer's vocabulary coverage
+
+For best results, ensure your training data (spam.csv) contains similar spam patterns. If any of these aren't detected as spam, you may need to retrain your model with more diverse spam examples.
