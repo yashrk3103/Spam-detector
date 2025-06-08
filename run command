@@ -1,0 +1,7 @@
+#for create virtual environment
+
+venv\Scripts\activate
+
+#run
+
+streamlit run ./app/app.py
