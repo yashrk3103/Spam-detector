@@ -9,3 +9,4 @@ explainer = LimeTextExplainer(class_names=['ham', 'spam'])
 predict_fn = lambda x: model.predict_proba(vectorizer.transform(x))
 exp = explainer.explain_instance(df['message'][10], predict_fn, num_features=6)
 exp.save_to_file('explainability/explanation.html')
+
