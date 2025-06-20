@@ -89,7 +89,7 @@ if analyze_btn:
             pred = proba.argmax()
             
             # Enhanced spam detection logic
-            if pred == 1 and proba[1] >= 0.8:  # Only classify as spam if confidence >= 80%
+            if pred == 1 and proba[1] >= 0.6:  # Only classify as spam if confidence >= 80%
                 st.error(f"🚨 SPAM DETECTED! (confidence: {proba[1]:.0%})")
                 st.markdown("""
                 **Spam characteristics detected:**
@@ -98,7 +98,7 @@ if analyze_btn:
                 - Request for personal information
                 - Unusual links or numbers
                 """)
-            elif pred == 1 and proba[1] < 0.8:
+            elif pred == 1 and proba[1] < 0.6:
                 st.warning(f"⚠️ Potential spam (low confidence: {proba[1]:.0%})")
                 st.info("This message has some spam characteristics but didn't meet the high confidence threshold.")
             else:
