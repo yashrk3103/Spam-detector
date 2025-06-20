@@ -148,7 +148,7 @@ st.markdown("### About this detector")
 st.markdown("""
 - Uses Naive Bayes classifier  
 - Trained on SMS Spam Collection dataset  
-- Requires 80%+ confidence for spam detection  
+- Requires 60%+ confidence for spam detection  
 - Provides explanations using LIME
 """)
 
