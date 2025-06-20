@@ -57,7 +57,7 @@ explainer = LimeTextExplainer(class_names=['ham', 'spam'])
 predict_fn = lambda x: model.predict_proba(vectorizer.transform(x))
 
 # UI Components
-col1, col2 = st.columns([2, 1])
+col1, col2 = st.columns([2, 0.1])
 
 with col1:
     user_input = st.text_area(
@@ -68,14 +68,14 @@ with col1:
 
     analyze_btn = st.button("Analyze Message", type="primary")
 
-with col2:
-    st.markdown("### About this detector")
-    st.markdown("""
-    - Uses Naive Bayes classifier
-    - Trained on SMS Spam Collection dataset
-    - Requires 80%+ confidence for spam detection
-    - Provides explanations using LIME
-    """)
+# with col2:
+#     st.markdown("### About this detector")
+#     st.markdown("""
+#     - Uses Naive Bayes classifier
+#     - Trained on SMS Spam Collection dataset
+#     - Requires 80%+ confidence for spam detection
+#     - Provides explanations using LIME
+#     """)
 
 if analyze_btn:
     if not user_input.strip():
@@ -142,6 +142,15 @@ if analyze_btn:
 
         except Exception as e:
             st.error(f"Analysis error: {str(e)}")
+
+            # About section moved here
+st.markdown("### About this detector")
+st.markdown("""
+- Uses Naive Bayes classifier  
+- Trained on SMS Spam Collection dataset  
+- Requires 80%+ confidence for spam detection  
+- Provides explanations using LIME
+""")
 
 # Model info expander
 with st.expander("Technical Details"):
