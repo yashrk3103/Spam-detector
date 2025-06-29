@@ -68,14 +68,6 @@ with col1:
 
     analyze_btn = st.button("Analyze Message", type="primary")
 
-# with col2:
-#     st.markdown("### About this detector")
-#     st.markdown("""
-#     - Uses Naive Bayes classifier
-#     - Trained on SMS Spam Collection dataset
-#     - Requires 80%+ confidence for spam detection
-#     - Provides explanations using LIME
-#     """)
 
 if analyze_btn:
     if not user_input.strip():
@@ -89,7 +81,7 @@ if analyze_btn:
             pred = proba.argmax()
             
             # Enhanced spam detection logic
-            if pred == 1 and proba[1] >= 0.6:  # Only classify as spam if confidence >= 80%
+            if pred == 1 and proba[1] >= 0.6:  # Only classify as spam if confidence >= 60%
                 st.error(f"🚨 SPAM DETECTED! (confidence: {proba[1]:.0%})")
                 st.markdown("""
                 **Spam characteristics detected:**
