@@ -22,7 +22,7 @@ def load_or_train_model():
     
     if not (os.path.exists('models/vectorizer.pkl') and os.path.exists('models/model.pkl')):
         try:
-            df = pd.read_csv("data/spam.csv", encoding='latin-1')
+            df = pd.read_csv("Proj/data/spam.csv", encoding='latin-1')
             df = df.rename(columns={'v1': 'label', 'v2': 'text'})
             df['label'] = df['label'].map({'ham': 0, 'spam': 1})
             
@@ -148,5 +148,5 @@ st.markdown("""
 with st.expander("Technical Details"):
     st.write(f"Vocabulary size: {len(vectorizer.vocabulary_)}")
     st.write("Model type:", model.__class__.__name__)
-    st.write("Confidence threshold for spam:", "80%")
+    st.write("Confidence threshold for spam:", "60%")
     st.write("Minimum words for explanation:", "3")
