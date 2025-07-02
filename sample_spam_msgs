@@ -41,3 +41,50 @@ Here are some example spam messages that should be detected as spam by your clas
 - The vectorizer's vocabulary coverage
 
 For best results, ensure your training data (spam.csv) contains similar spam patterns. If any of these aren't detected as spam, you may need to retrain your model with more diverse spam examples.
+
+
+## Spam Messages (With Suspicious Links)
+"Congratulations! You’ve won a $1000 Walmart gift card. Click here to claim now! ➡️ http://bit.ly/walmart-gc-scam"
+
+"URGENT: Your bank account has been locked. Verify your details immediately: 🔗 https://secure-bank-login.com/fake"
+
+"Get rich quick! Earn $5000/week working from home. Sign up now! 🌟 http://fastmoney-making.xyz"
+
+"Hi love, I saw your profile. Let’s chat on WhatsApp: 💬 https://wa.me/1234567890-scam"
+
+"Limited-time offer! 80% off Rolex watches. Buy now before stock runs out! ⌚ http://luxurywatches-discount.com"
+
+"Your Netflix subscription has expired. Update payment info here: 🎬 http://netflix-renew-account.com"
+
+"You have a pending delivery. Pay $2.99 to receive your package: 📦 http://track-dhl-package.xyz"
+
+"Lose 20lbs in 2 weeks with this miracle pill! Order now! 💊 http://fatburner-fake.com"
+
+"Your Apple ID has been compromised. Click to secure your account: 🍏 http://appleid-verification.com"
+
+"Free iPhone 15! Just pay shipping & handling. Claim yours today! 📱 http://freeiphone15-offer.com"
+
+
+
+
+## Ham Messages (Legitimate, Safe Links)
+
+"Your Amazon order #12345 has been shipped. Track here: 🔗 https://amazon.com/track-pkg/12345"
+
+"Hi John, just checking in. Are we still meeting tomorrow at 3 PM? Let me know! 📅 https://calendar.google.com/event"
+
+"Your monthly bank statement is ready. Log in securely to view it: 🔒 https://chase.com/secure/login"
+
+"Your doctor’s appointment is confirmed for Friday, July 7, at 10 AM. 🏥 https://myhealthportal.com/appointments"
+
+"Thanks for your payment of $50. Your invoice #4567 is now paid. ✅ https://paypal.com/receipt/4567"
+
+"Your Uber ride receipt: $15.50 for your trip on June 30. 🚗 https://uber.com/receipt/XYZ123"
+
+"Your LinkedIn connection request from Sarah Johnson. 👔 https://linkedin.com/in/sarah-johnson"
+
+"Your flight (Delta #DL123) is on time. Departure at 2:30 PM. ✈️ https://delta.com/track-flight/DL123"
+
+"Your verification code is 583921. Expires in 10 minutes. 🔐 https://accounts.google.com/2FA"
+
+"Reminder: Your electricity bill of $75 is due on July 10. 💡 https://myutilityprovider.com/pay-bill"
